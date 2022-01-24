@@ -102,6 +102,10 @@ theme: landscape
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy: 
+ url: https://chenyuancai.github.io/cfound
+ # 仓库类型
  type: git
- repo: https://github.com/chenyuancai/cfound.github.io.git
- branch: master
+ # 仓库地址
+ repo: https://github.com/$chenyuancai/cfound.git
+ # 部署的分支
+ branch: main
