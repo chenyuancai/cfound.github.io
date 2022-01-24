@@ -108,4 +108,4 @@ deploy:
  # 仓库地址
  repo: https://github.com/chenyuancai/cfound.github.io.git
  # 部署的分支
- branch: main
+ branch: master
