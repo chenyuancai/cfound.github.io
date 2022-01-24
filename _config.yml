@@ -106,6 +106,6 @@ deploy:
  # 仓库类型
  type: git
  # 仓库地址
- repo: https://github.com/$chenyuancai/cfound.github.io.git
+ repo: https://github.com/chenyuancai/cfound.github.io.git
  # 部署的分支
  branch: main
