@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>CCC-Sharo</title>
+  
+  <subtitle>技术笔记</subtitle>
+  <link href="http://cfound.top/atom.xml" rel="self"/>
+  
+  <link href="http://cfound.top/"/>
+  <updated>2022-01-31T10:17:09.353Z</updated>
+  <id>http://cfound.top/</id>
+  
+  <author>
+    <name>Doc Cfound</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>board</title>
+    <link href="http://cfound.top/2022/01/31/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E7%9A%84%E6%84%8F%E4%B9%89/"/>
+    <id>http://cfound.top/2022/01/31/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E7%9A%84%E6%84%8F%E4%B9%89/</id>
+    <published>2022-01-31T10:06:14.801Z</published>
+    <updated>2022-01-31T10:17:09.353Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="并发"><a href="#并发" class="headerlink" title="并发"></a>并发</h1><p>【高并发】</p><p>当前系统能够同时承载的并发数</p><p>tps：每秒事务处理的数量</p><p>qps：每秒事务查询数量</p><h1 id="如何支撑高并发"><a href="#如何支撑高并发" class="headerlink" title="如何支撑高并发"></a>如何支撑高并发</h1><p>硬件资源：</p><p>cpu：核心数，并行任务数量（几核），程序执行</p><p>内存：存储数据；</p><p>磁盘：读写；</p><p>网卡：数据传输；</p><p>软件资源：</p><p>CPU -&gt; 线程，8核（同时可以运行8个线程）</p><p>IO -&gt; 数据库交互 -&gt; 数据刷到磁盘，内存/缓存/异步刷盘策略（为了提高IO效率）；数据库做分库分表、分布式缓存（1、内存中；2、存储在数据库中是按照特定的数据结构，这些是将关系型数据库中的数据计算出来，将数据非结构化存储在缓存中，减少计算带来的性能损耗）、分布式消息中间件（异步，减少性能损耗，时间）。</p><p>单节点遇到瓶颈，多个计算机组成一个分布式计算机。</p><h1 id="多线程技术"><a href="#多线程技术" class="headerlink" title="多线程技术"></a>多线程技术</h1><p>java程序 -&gt; .java源文件（磁盘） -&gt; JVM（编译）.class -&gt; main方法运行这个程序（加载到内存中） -产生一个线程 </p><p>CPU来执行这个程序的指令</p><p>​    假设进程中，有一个从磁盘加载一个文件保存到数据库的操作。</p><p>​    CPU的运算效率和磁盘的IO效率。（磁盘-&gt;内存-&gt;用户空间）</p><p>​    CPU的运算效率比磁盘的IO效率更快，会造成CPU阻塞。</p><p>​    CPU是计算机汇中最核心的资源（CPU阻塞会造成CPU资源浪费）</p><p>多道程序设计 ：多进程，让多个进程同时加载到内存，进程之间是相互隔离不影响。</p><p>分时系统：利用CPU的时间片切换</p><p>线程为轻量级进程</p><h2 id="线程特征"><a href="#线程特征" class="headerlink" title="线程特征"></a>线程特征</h2><ul><li>异步（注册-&gt;发送email）</li><li>并行（CPU核数）</li></ul><h1 id="java中使用线程"><a href="#java中使用线程" class="headerlink" title="java中使用线程"></a>java中使用线程</h1><ul><li>集成Thread</li><li>实现Runnable</li><li>Callable/Future</li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;并发&quot;&gt;&lt;a href=&quot;#并发&quot; class=&quot;headerlink&quot; title=&quot;并发&quot;&gt;&lt;/a&gt;并发&lt;/h1&gt;&lt;p&gt;【高并发】&lt;/p&gt;
+&lt;p&gt;当前系统能够同时承载的并发数&lt;/p&gt;
+&lt;p&gt;tps：每秒事务处理的数量&lt;/p&gt;
+&lt;p&gt;qps：每秒事务查询数量&lt;/</summary>
+      
+    
+    
+    
+    <category term="并发编程" scheme="http://cfound.top/categories/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/"/>
+    
+    
+    <category term="博客" scheme="http://cfound.top/tags/%E5%8D%9A%E5%AE%A2/"/>
+    
+    <category term="hexo" scheme="http://cfound.top/tags/hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="http://cfound.top/2022/01/15/hello-world/"/>
+    <id>http://cfound.top/2022/01/15/hello-world/</id>
+    <published>2022-01-15T15:38:46.219Z</published>
+    <updated>1985-10-26T08:15:00.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt; for</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+</feed>
